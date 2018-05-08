@@ -1,5 +1,5 @@
 {
-    "name": "developeruz/yii2-db-rbac",
+    "name": "aminkt/yii2-db-rbac",
     "description": "Dynamic control of access rights in YII2",
     "keywords": ["yii", "rbac"],
     "type": "yii2-extension",
@@ -9,17 +9,22 @@
             "name": "Elvira Sheina",
             "email": "elleuz@gmail.com",
             "homepage": "http://developer.uz"
+        },
+        {
+            "name": "Amin Keshavarz",
+            "email": "ak_1596@yahoo.com",
+            "homepage": "http://keshavarz.pro"
         }
     ],
     "require": {
         "yiisoft/yii2": "*"
     },
     "support": {
-        "issues": "https://github.com/developeruz/yii2-db-rbac/issues"
+        "issues": "https://github.com/aminkt/yii2-db-rbac/issues"
     },
     "autoload": {
         "psr-4": {
-            "developeruz\\db_rbac\\": ""
+            "aminkt\\db_rbac\\": ""
         }
     }
 }
