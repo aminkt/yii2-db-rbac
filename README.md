@@ -1,6 +1,9 @@
 Dynamic Access Control for Yii2
 ============================================
 
+>   This repo is a foke from [ТУТ](https://github.com/developeruz/yii2-db-rbac)
+>   This fork is changed from main repo to our needs so please like the main repo first to support them.
+
 ##### НА РУССКОМ [ТУТ](https://github.com/developeruz/yii2-db-rbac/blob/master/README.RU.md)
 
 The easiest way to create access control in Yii2 without changes in the code.
