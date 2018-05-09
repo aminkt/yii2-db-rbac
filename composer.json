@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "aminkt\\db_rbac\\": ""
+            "developeruz\\db_rbac\\": ""
         }
     }
 }
