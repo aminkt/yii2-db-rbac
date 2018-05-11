@@ -9,6 +9,7 @@
  */
 namespace developeruz\db_rbac\behaviors;
 
+use developeruz\db_rbac\Yii2DbRbac;
 use Yii;
 use yii\behaviors\AttributeBehavior;
 use yii\di\Instance;
@@ -115,28 +116,12 @@ class AccessBehavior extends AttributeBehavior
     protected function checkPermission($route)
     {
         //$route[0] - is the route, $route[1] - is the associated parameters
-        $routes = $this->createPartRoutes($route);
+        $routes = Yii2DbRbac::createPartRoutes($route[0]);
         foreach ($routes as $routeVariant) {
             if (Yii::$app->user->can($routeVariant, $route[1])) {
                 return true;
             }
         }
         return false;
-    }
-
-    protected function createPartRoutes($route)
-    {
-        //$route[0] - is the route, $route[1] - is the associated parameters
-
-        $routePathTmp = explode('/', trim($route[0], '/'));
-        $result = [];
-        $routeVariant = array_shift($routePathTmp);
-        $result[] = $routeVariant;
-
-        foreach ($routePathTmp as $routePart) {
-            $routeVariant .= '/' . $routePart;
-            $result[] = $routeVariant;
-        }
-        return $result;
     }
 }
